@@ -1,0 +1,14 @@
+<div>
+	<a href="#!add" class='btn btn-primary'> Add New Film</a>
+	<table class='table' ng-table='imdb.tableParams' show-filter="true">
+			<tr ng-repeat="i in $data">
+				<td  title="'Rank'" filter="{rank: 'text'}"><b> {{i.rank}} </b></td>
+				<td  title="'Title'" filter="{title: 'text'}"><b> {{i.title}} </b></td>
+				<td> 
+					<a class='btn btn-warning' ng-click='imdb.editmovie(i.rank, i.title, i.id)' href='#!edit'> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </a>
+					<a ng-click='imdb.deletemovie(i.id)' href="#!/" class='btn btn-danger'> <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>	</a>
+				 </td>
+			</tr>
+	</table>
+<at-pagination at-config='config' > </at-pagination>
+</div>

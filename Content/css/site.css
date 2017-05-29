@@ -1,0 +1,17 @@
+.navbar-inverse {
+    background-color: #123;
+    border-color: #080808;
+}
+
+.navbar-inverse .navbar-nav > .active > a, inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+color: #fff;
+background-color: #912;
+}
+
+.eMessage{
+    color:red;
+     display: block;
+     text-align:center;
+     background-color: silver;
+     font-weight:bold;
+}

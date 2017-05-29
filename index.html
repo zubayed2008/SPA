@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Single Page Application</title>
+		<link href='Content/css/bootstrap.css' rel='stylesheet' ></link>
+        <link href='Content/css/ng-table.min.css' rel='stylesheet' ></link>
+        <link href='Content/css/site.css' rel='stylesheet' ></link>
+        
+		<script src='Content/js/jquery-1.10.2.js'> </script>
+		<script src='Content/js/angular.js'> </script>
+        <script src='Content/js/angular-route.min.js'> </script>
+		<script src='Content/js/bootstrap.js'> </script>
+        <script src='Content/js/ng-table.min.js'> </script>
+        <script src='Content/js/app/application.js'> </script>
+	</head>
+
+	<body ng-app='tableapp' ng-controller='imdbController as imdb'>
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#!/" ng-click='imdb.detailstrue()'>IMDB SPA</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#!about">About</a></li>
+              <li><a href="#!contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>        
+		<br/>
+       
+        <div class='container'>
+            <div ng-view></div>
+        </div>
+        </div>
+	</body>
+</html>

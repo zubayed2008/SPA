@@ -1,0 +1,41 @@
+</br></br>
+	<h1> Add a New Film </h1>
+	<form name='movieAdd' novalidate ng-submit='submit()'>
+		<div class='row'>
+			<div class='form-group'>
+				<div class='col-md-4 col-sm-4 col-xs-4'> 
+					<label for='rank'>Rank:</label> 
+					<input type='number' name='rank' ng-model='movie.rank' class='form-control' placeholder='Example: 101' ng-required='true'/>
+					<div ng-show='movieAdd.rank.$touched && movieAdd.rank.$invalid'>
+						<small class='eMessage'> Enter a Valid Movie Rank </small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='form-group'>
+				<div class='col-md-4 col-sm-4 col-xs-4'>
+					<label for='Movie Name'>Movie Name:</label> 
+					<input type='text' name='title' ng-model='movie.title' class='form-control' placeholder='Example: Titanic' ng-required='true'/>
+					<div ng-show='movieAdd.title.$touched && movieAdd.title.$invalid'>
+						<small class='eMessage'> Enter a Valid Movie Name </small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='form-group'>
+				<div class='col-md-4 col-sm-4 col-xs-4'>
+					<label for='imdbID'>IMDB ID: </label>
+				    <input type='text' name='id' ng-model='movie.id' class='form-control' ng-required='true' placeholder='tt21341'/>
+				    <div ng-show='movieAdd.id.$touched && movieAdd.id.$invalid'>
+						<small class='eMessage'> Enter a Valid IMDB ID </small>
+					</div>
+			    </div>
+			</div>
+		</div>
+	</br>
+	&nbsp &nbsp &nbsp &nbsp<a href="#!/" class='btn btn-md btn-success col-md-offset-2'>Back</a> <input type='submit' ng-click='imdb.addmovie(movie)' class='btn btn-md btn-danger' value='Submit' ng-disabled='movieAdd.$invalid' />
+	</form>
+
+	
